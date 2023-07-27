@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.11.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-dev-cli@5.11.0/packages/gatsby-dev-cli) (2023-06-15)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.11)
+
+**Note:** Version bump only for package gatsby-dev-cli
+
+## [5.10.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-dev-cli@5.10.0/packages/gatsby-dev-cli) (2023-05-16)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.10)
+
+#### Bug Fixes
+
+- update dependency verdaccio to ^5.24.1 for gatsby-dev-cli [#38026](https://github.com/gatsbyjs/gatsby/issues/38026) ([49578cb](https://github.com/gatsbyjs/gatsby/commit/49578cbb2b3caf9dcc15442ebbe6ad2a061a08e1))
+
+## [5.9.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-dev-cli@5.9.0/packages/gatsby-dev-cli) (2023-04-18)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.9)
+
+#### Bug Fixes
+
+- update dependency verdaccio to ^5.23.1 for gatsby-dev-cli [#37871](https://github.com/gatsbyjs/gatsby/issues/37871) ([85d2aed](https://github.com/gatsbyjs/gatsby/commit/85d2aed9eb64b80a255ab78622291db4c358c772))
+- update dependency fs-extra to ^11.1.1 [#37827](https://github.com/gatsbyjs/gatsby/issues/37827) ([3e9a590](https://github.com/gatsbyjs/gatsby/commit/3e9a590fdc0b4cdbc763b6a6e3ca3e983ac8231a))
+
+## [5.8.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-dev-cli@5.8.0/packages/gatsby-dev-cli) (2023-03-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.8)
+
+#### Bug Fixes
+
+- Add `self_path` to verdaccio config [#37727](https://github.com/gatsbyjs/gatsby/issues/37727) ([b9def24](https://github.com/gatsbyjs/gatsby/commit/b9def24d957d16d8ba6b520ef71bed459ee9a784))
+
+### [5.7.1](https://github.com/gatsbyjs/gatsby/commits/gatsby-dev-cli@5.7.1/packages/gatsby-dev-cli) (2023-03-10)
+
+#### Bug Fixes
+
+- Add `self_path` to verdaccio config [#37727](https://github.com/gatsbyjs/gatsby/issues/37727) [#37736](https://github.com/gatsbyjs/gatsby/issues/37736) ([9da5bdd](https://github.com/gatsbyjs/gatsby/commit/9da5bdd1f129e8d7afe56b60aef07bac38164daf))
+
+## [5.7.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-dev-cli@5.7.0/packages/gatsby-dev-cli) (2023-02-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.7)
+
+**Note:** Version bump only for package gatsby-dev-cli
+
 ## [5.6.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-dev-cli@5.6.0/packages/gatsby-dev-cli) (2023-02-07)
 
 [🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.6)

@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.11.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-graphql@5.11.0/packages/gatsby-source-graphql) (2023-06-15)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.11)
+
+#### Bug Fixes
+
+- update minor and patch dependencies for gatsby-source-graphql [#38163](https://github.com/gatsbyjs/gatsby/issues/38163) ([8441ad5](https://github.com/gatsbyjs/gatsby/commit/8441ad5e7f88d9e842974dee5d63e0e7db874319))
+
+## [5.10.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-graphql@5.10.0/packages/gatsby-source-graphql) (2023-05-16)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.10)
+
+#### Bug Fixes
+
+- update minor and patch dependencies for gatsby-source-graphql [#38028](https://github.com/gatsbyjs/gatsby/issues/38028) ([d611439](https://github.com/gatsbyjs/gatsby/commit/d61143994682727693eb91e971bfa1634cee1326))
+
+## [5.9.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-graphql@5.9.0/packages/gatsby-source-graphql) (2023-04-18)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.9)
+
+**Note:** Version bump only for package gatsby-source-graphql
+
+## [5.8.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-graphql@5.8.0/packages/gatsby-source-graphql) (2023-03-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.8)
+
+**Note:** Version bump only for package gatsby-source-graphql
+
+## [5.7.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-graphql@5.7.0/packages/gatsby-source-graphql) (2023-02-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.7)
+
+**Note:** Version bump only for package gatsby-source-graphql
+
 ## [5.6.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-graphql@5.6.0/packages/gatsby-source-graphql) (2023-02-07)
 
 [🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.6)

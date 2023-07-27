@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.11.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-plugin-page-creator@5.11.0/packages/gatsby-plugin-page-creator) (2023-06-15)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.11)
+
+**Note:** Version bump only for package gatsby-plugin-page-creator
+
+## [5.10.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-plugin-page-creator@5.10.0/packages/gatsby-plugin-page-creator) (2023-05-16)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.10)
+
+**Note:** Version bump only for package gatsby-plugin-page-creator
+
+## [5.9.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-plugin-page-creator@5.9.0/packages/gatsby-plugin-page-creator) (2023-04-18)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.9)
+
+#### Bug Fixes
+
+- update dependency fs-extra to ^11.1.1 [#37827](https://github.com/gatsbyjs/gatsby/issues/37827) ([3e9a590](https://github.com/gatsbyjs/gatsby/commit/3e9a590fdc0b4cdbc763b6a6e3ca3e983ac8231a))
+- Find nested files for knownCollections [#37762](https://github.com/gatsbyjs/gatsby/issues/37762) ([9916b3d](https://github.com/gatsbyjs/gatsby/commit/9916b3dfd52567d76b50d3f45e4126d2df321cbd))
+
+## [5.8.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-plugin-page-creator@5.8.0/packages/gatsby-plugin-page-creator) (2023-03-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.8)
+
+#### Bug Fixes
+
+- Track correct `knownPagePaths` [#37745](https://github.com/gatsbyjs/gatsby/issues/37745) ([b121057](https://github.com/gatsbyjs/gatsby/commit/b1210574cfd59752b2f95e7146b8d83ea20a7110))
+
+## [5.7.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-plugin-page-creator@5.7.0/packages/gatsby-plugin-page-creator) (2023-02-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.7)
+
+**Note:** Version bump only for package gatsby-plugin-page-creator
+
 ## [5.6.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-plugin-page-creator@5.6.0/packages/gatsby-plugin-page-creator) (2023-02-07)
 
 [🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.6)

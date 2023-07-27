@@ -26,6 +26,7 @@ import { shouldGenerateEngines } from "./engines-helpers"
 import { ROUTES_DIRECTORY } from "../constants"
 import { BabelConfigItemsCacheInvalidatorPlugin } from "./babel-loader"
 import { PartialHydrationPlugin } from "./webpack/plugins/partial-hydration"
+import { resolveJSFilepath } from "../bootstrap/resolve-js-file-path"
 
 const FRAMEWORK_BUNDLES = [`react`, `react-dom`, `scheduler`, `prop-types`]
 
@@ -614,13 +615,38 @@ module.exports = async (
     config.optimization = {
       // TODO fix our partial hydration manifest
       mangleExports: !isPartialHydrationEnabled,
-      splitChunks: {
+      minimize: false,
+    }
+
+    if (stage === `build-html`) {
+      config.optimization.splitChunks = {
+        chunks: `async`,
+        minSize: 20000,
+        minRemainingSize: 0,
+        minChunks: 1,
+        maxAsyncRequests: 30,
+        maxInitialRequests: 30,
+        enforceSizeThreshold: 50000,
+        cacheGroups: {
+          defaultVendors: {
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10,
+            reuseExistingChunk: true,
+          },
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true,
+          },
+        },
+      }
+    } else {
+      config.optimization.splitChunks = {
         cacheGroups: {
           default: false,
           defaultVendors: false,
         },
-      },
-      minimize: false,
+      }
     }
   }
 
@@ -883,25 +909,27 @@ module.exports = async (
       `webpack`,
       `stage-` + stage
     )
+    const pluginsPathsPromises = store
+      .getState()
+      .flattenedPlugins.filter(plugin =>
+        plugin.nodeAPIs.includes(`onCreateWebpackConfig`)
+      )
+      .map(
+        async plugin =>
+          plugin.resolvedCompiledGatsbyNode ??
+          (await resolveJSFilepath({
+            rootDir: plugin.resolve,
+            filePath: path.join(plugin.resolve, `gatsby-node`),
+          }))
+      )
+    const pluginsPaths = await Promise.all(pluginsPathsPromises)
 
     const cacheConfig = {
       type: `filesystem`,
       name: stage,
       cacheLocation,
       buildDependencies: {
-        config: [
-          __filename,
-          ...store
-            .getState()
-            .flattenedPlugins.filter(plugin =>
-              plugin.nodeAPIs.includes(`onCreateWebpackConfig`)
-            )
-            .map(
-              plugin =>
-                plugin.resolvedCompiledGatsbyNode ??
-                path.join(plugin.resolve, `gatsby-node.js`)
-            ),
-        ],
+        config: [__filename, ...pluginsPaths],
       },
     }
 

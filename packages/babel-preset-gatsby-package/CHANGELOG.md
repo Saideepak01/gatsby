@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.11.0](https://github.com/gatsbyjs/gatsby/commits/babel-preset-gatsby-package@3.11.0/packages/babel-preset-gatsby-package) (2023-06-15)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.11)
+
+#### Bug Fixes
+
+- update dependency core-js to ^3.30.2 [#38151](https://github.com/gatsbyjs/gatsby/issues/38151) ([aefdc09](https://github.com/gatsbyjs/gatsby/commit/aefdc09e94f0a3c257519be133a260258241740d))
+
+#### Chores
+
+- update dependency @types/babel\_\_core to ^7.20.1 for babel-preset-gatsby-package [#38141](https://github.com/gatsbyjs/gatsby/issues/38141) ([59cf598](https://github.com/gatsbyjs/gatsby/commit/59cf59826f0b044420f3cbf287acb590f24a8f84))
+
+## [3.10.0](https://github.com/gatsbyjs/gatsby/commits/babel-preset-gatsby-package@3.10.0/packages/babel-preset-gatsby-package) (2023-05-16)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.10)
+
+#### Features
+
+- add `typePrefix` option [#37967](https://github.com/gatsbyjs/gatsby/issues/37967) ([3f8c55b](https://github.com/gatsbyjs/gatsby/commit/3f8c55b087db6ef0a6e77872f6fda14b75182720))
+
+#### Bug Fixes
+
+- update dependency core-js to ^3.30.1 [#38017](https://github.com/gatsbyjs/gatsby/issues/38017) ([3d10f90](https://github.com/gatsbyjs/gatsby/commit/3d10f9035e8bfeedfab8a4a400c687e29d0f9a03))
+
+## [3.9.0](https://github.com/gatsbyjs/gatsby/commits/babel-preset-gatsby-package@3.9.0/packages/babel-preset-gatsby-package) (2023-04-18)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.9)
+
+**Note:** Version bump only for package babel-preset-gatsby-package
+
+## [3.8.0](https://github.com/gatsbyjs/gatsby/commits/babel-preset-gatsby-package@3.8.0/packages/babel-preset-gatsby-package) (2023-03-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.8)
+
+**Note:** Version bump only for package babel-preset-gatsby-package
+
+## [3.7.0](https://github.com/gatsbyjs/gatsby/commits/babel-preset-gatsby-package@3.7.0/packages/babel-preset-gatsby-package) (2023-02-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.7)
+
+#### Bug Fixes
+
+- Pin `@babel/plugin-transform-modules-commonjs` to 7.18.6 [#37660](https://github.com/gatsbyjs/gatsby/issues/37660) ([389b100](https://github.com/gatsbyjs/gatsby/commit/389b100067708c7ee1ee0038cfb4a71233553a3c))
+
 ## [3.6.0](https://github.com/gatsbyjs/gatsby/commits/babel-preset-gatsby-package@3.6.0/packages/babel-preset-gatsby-package) (2023-02-07)
 
 [🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.6)

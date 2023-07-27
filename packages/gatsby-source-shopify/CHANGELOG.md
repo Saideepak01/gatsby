@@ -3,6 +3,80 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.11.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-shopify@8.11.0/packages/gatsby-source-shopify) (2023-06-15)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.11)
+
+#### Bug Fixes
+
+- update dependency node-fetch to ^2.6.11 for gatsby-source-shopify [#38157](https://github.com/gatsbyjs/gatsby/issues/38157) ([4cd7cd2](https://github.com/gatsbyjs/gatsby/commit/4cd7cd23301b6e8d6d14b4b9e0b4478a5e30d7fa))
+- update typescript [#38133](https://github.com/gatsbyjs/gatsby/issues/38133) ([aa7a078](https://github.com/gatsbyjs/gatsby/commit/aa7a078383ca5a549743be3269e9bde44655a185))
+
+#### Chores
+
+- Various `yarn bootstrap` fixes fixes [#38223](https://github.com/gatsbyjs/gatsby/issues/38223) ([df12265](https://github.com/gatsbyjs/gatsby/commit/df1226576b911be0f962c149c0bcbad279d9f806))
+- update [dev] minor and patch dependencies for gatsby-source-shopify [#38140](https://github.com/gatsbyjs/gatsby/issues/38140) ([a847e1c](https://github.com/gatsbyjs/gatsby/commit/a847e1ce47e536d6f0c0b9dd75ac092dbabf3440))
+
+## [8.10.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-shopify@8.10.0/packages/gatsby-source-shopify) (2023-05-16)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.10)
+
+#### Bug Fixes
+
+- update dependency sharp to ^0.32.1 [#38024](https://github.com/gatsbyjs/gatsby/issues/38024) ([d7cccfe](https://github.com/gatsbyjs/gatsby/commit/d7cccfeac7dbb0f130f87d809879284319d7830d))
+- update dependency prettier to v2.8.8 [#38003](https://github.com/gatsbyjs/gatsby/issues/38003) ([c780049](https://github.com/gatsbyjs/gatsby/commit/c780049bc78aecf9dfb36f03db3ec81a7feff813))
+
+#### Chores
+
+- update [dev] minor and patch dependencies for gatsby-source-shopify [#38007](https://github.com/gatsbyjs/gatsby/issues/38007) ([86052c4](https://github.com/gatsbyjs/gatsby/commit/86052c45ed7533668bc469b45bce0b1912f322cc))
+
+## [8.9.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-shopify@8.9.0/packages/gatsby-source-shopify) (2023-04-18)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.9)
+
+#### Features
+
+- use gatsby node id to enable relationships [#37775](https://github.com/gatsbyjs/gatsby/issues/37775) ([a2c3fa3](https://github.com/gatsbyjs/gatsby/commit/a2c3fa3f8af6ec7021bbdcb207d886ea16304dfd))
+
+#### Bug Fixes
+
+- update dependency prettier to v2.8.7 [#37834](https://github.com/gatsbyjs/gatsby/issues/37834) ([029ee85](https://github.com/gatsbyjs/gatsby/commit/029ee85e3ea3dd819f07159fcb22b4fb35ebbf86))
+- update dependency node-fetch to ^2.6.9 for gatsby-source-shopify [#37830](https://github.com/gatsbyjs/gatsby/issues/37830) ([ae4a765](https://github.com/gatsbyjs/gatsby/commit/ae4a765ff02c86fddcb9ae655699754e40725752))
+- update typescript to v5 (major) [#37906](https://github.com/gatsbyjs/gatsby/issues/37906) ([3859ba6](https://github.com/gatsbyjs/gatsby/commit/3859ba6ce629e658525f858a8799b08c34c3eda5))
+- Correct interface query [#37788](https://github.com/gatsbyjs/gatsby/issues/37788) ([ae1e8e9](https://github.com/gatsbyjs/gatsby/commit/ae1e8e98f323a9ee04a71a46eddf453ff6cd6ccd))
+
+#### Chores
+
+- update [dev] major dependencies for gatsby-source-shopify (major) [#37889](https://github.com/gatsbyjs/gatsby/issues/37889) ([1fa8314](https://github.com/gatsbyjs/gatsby/commit/1fa831481cfd02c7d50377b536d9ca516c6c6df9))
+- update typescript [#37848](https://github.com/gatsbyjs/gatsby/issues/37848) ([9f92796](https://github.com/gatsbyjs/gatsby/commit/9f92796070b0e73fa92089af93de376c9be9021e))
+- update [dev] minor and patch dependencies for gatsby-source-shopify [#37818](https://github.com/gatsbyjs/gatsby/issues/37818) ([4def2f4](https://github.com/gatsbyjs/gatsby/commit/4def2f4f92c97dc99d5f5b9b823710318b529c33))
+
+### [8.8.2](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-shopify@8.8.2/packages/gatsby-source-shopify) (2023-03-28)
+
+#### Bug Fixes
+
+- Correct interface query [#37788](https://github.com/gatsbyjs/gatsby/issues/37788) [#37791](https://github.com/gatsbyjs/gatsby/issues/37791) ([944b074](https://github.com/gatsbyjs/gatsby/commit/944b074d248039060060f4826abb13239e87449b))
+
+### [8.8.1](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-shopify@8.8.1/packages/gatsby-source-shopify) (2023-03-27)
+
+#### Features
+
+- use gatsby node id to enable relationships [#37775](https://github.com/gatsbyjs/gatsby/issues/37775) [#37786](https://github.com/gatsbyjs/gatsby/issues/37786) ([0f838b2](https://github.com/gatsbyjs/gatsby/commit/0f838b2c44f9bc979ce139f8c8fbfcacc2994b3b))
+
+## [8.8.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-shopify@8.8.0/packages/gatsby-source-shopify) (2023-03-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.8)
+
+#### Features
+
+- Add `apiVersion` option [#37605](https://github.com/gatsbyjs/gatsby/issues/37605) ([d0e0c49](https://github.com/gatsbyjs/gatsby/commit/d0e0c49e06e0eba0ba8a5d122b9b8728029e12e4))
+
+## [8.7.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-shopify@8.7.0/packages/gatsby-source-shopify) (2023-02-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.7)
+
+**Note:** Version bump only for package gatsby-source-shopify
+
 ## [8.6.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-source-shopify@8.6.0/packages/gatsby-source-shopify) (2023-02-07)
 
 [🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.6)

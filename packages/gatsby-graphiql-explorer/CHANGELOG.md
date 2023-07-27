@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.11.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-graphiql-explorer@3.11.0/packages/gatsby-graphiql-explorer) (2023-06-15)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.11)
+
+#### Bug Fixes
+
+- update minor and patch dependencies for gatsby [#38161](https://github.com/gatsbyjs/gatsby/issues/38161) ([9e27a90](https://github.com/gatsbyjs/gatsby/commit/9e27a906d2e2c58aebf5142e70115cfda6cab818))
+- update dependency core-js to ^3.30.2 [#38151](https://github.com/gatsbyjs/gatsby/issues/38151) ([aefdc09](https://github.com/gatsbyjs/gatsby/commit/aefdc09e94f0a3c257519be133a260258241740d))
+
+#### Chores
+
+- update [dev] minor and patch dependencies for gatsby-graphiql-explorer [#38138](https://github.com/gatsbyjs/gatsby/issues/38138) ([7b306cb](https://github.com/gatsbyjs/gatsby/commit/7b306cb4551ed6684f44ddc2f6eeade0f6d8fc60))
+
+## [3.10.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-graphiql-explorer@3.10.0/packages/gatsby-graphiql-explorer) (2023-05-16)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.10)
+
+#### Bug Fixes
+
+- update dependency core-js to ^3.30.1 [#38017](https://github.com/gatsbyjs/gatsby/issues/38017) ([3d10f90](https://github.com/gatsbyjs/gatsby/commit/3d10f9035e8bfeedfab8a4a400c687e29d0f9a03))
+
+#### Chores
+
+- update [dev] minor and patch dependencies for gatsby-graphiql-explorer [#37993](https://github.com/gatsbyjs/gatsby/issues/37993) ([cf17a32](https://github.com/gatsbyjs/gatsby/commit/cf17a32659610be281f046fc3562d329fdeaa503))
+
+## [3.9.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-graphiql-explorer@3.9.0/packages/gatsby-graphiql-explorer) (2023-04-18)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.9)
+
+#### Chores
+
+- update [dev] minor and patch dependencies for gatsby-graphiql-explorer [#37815](https://github.com/gatsbyjs/gatsby/issues/37815) ([0c8d0c5](https://github.com/gatsbyjs/gatsby/commit/0c8d0c5dc1401f0f03fe079e4d1cde708da8e35b))
+
+## [3.8.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-graphiql-explorer@3.8.0/packages/gatsby-graphiql-explorer) (2023-03-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.8)
+
+**Note:** Version bump only for package gatsby-graphiql-explorer
+
+## [3.7.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-graphiql-explorer@3.7.0/packages/gatsby-graphiql-explorer) (2023-02-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.7)
+
+**Note:** Version bump only for package gatsby-graphiql-explorer
+
 ## [3.6.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-graphiql-explorer@3.6.0/packages/gatsby-graphiql-explorer) (2023-02-07)
 
 [🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.6)

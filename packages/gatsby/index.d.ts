@@ -21,6 +21,8 @@ export type AvailableFeatures =
   | "image-cdn"
   | "graphql-typegen"
   | "content-file-path"
+  | "stateful-source-nodes"
+  | "adapters"
 
 export {
   Link,
@@ -31,6 +33,18 @@ export {
 } from "gatsby-link"
 
 export * from "gatsby-script"
+
+export {
+  AdapterInit,
+  IAdapter,
+  IStaticRoute,
+  IFunctionRoute,
+  IRedirectRoute,
+  IFunctionDefinition,
+  RoutesManifest,
+  FunctionsManifest,
+  IAdapterConfig,
+} from "./dist/utils/adapter/types"
 
 export const useScrollRestoration: (key: string) => {
   ref: React.MutableRefObject<HTMLElement | undefined>
@@ -317,6 +331,20 @@ type Proxy = {
   url: string
 }
 
+type Header = {
+  /**
+   * The path to match requests against.
+   */
+  source: string
+  /**
+   * Your custom response headers.
+   */
+  headers: Array<{
+    key: string
+    value: string
+  }>
+}
+
 /**
  * Gatsby configuration API.
  *
@@ -354,6 +382,16 @@ export interface GatsbyConfig {
   partytownProxiedURLs?: Array<string>
   /** Sometimes you need more granular/flexible access to the development server. Gatsby exposes the Express.js development server to your site’s gatsby-config.js where you can add Express middleware as needed. */
   developMiddleware?(app: any): void
+  /**
+   * You can set custom HTTP headers on the response of a given path. This allows you to, e.g. modify the caching behavior or configure access control. You can apply HTTP headers to static routes and redirects.
+   * @see http://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/headers/
+   */
+  headers?: Array<Header>
+  /**
+   * Adapters are responsible for taking the production output from Gatsby and turning it into something your deployment platform understands. They make it easier to build and deploy Gatsby on any deployment platform.
+   * @see http://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/adapters/
+   */
+  adapter?: IAdapter
 }
 
 /**
@@ -1470,6 +1508,11 @@ export interface Actions {
     plugin?: ActionPlugin,
     traceId?: string
   ): void
+
+  /**
+   * Marks the source plugin that called this function as stateful. Gatsby will not check for stale nodes for any plugin that calls this.
+   */
+  enableStatefulSourceNodes?(this: void, plugin?: ActionPlugin)
 }
 
 export interface Store {

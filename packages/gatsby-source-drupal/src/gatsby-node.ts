@@ -21,17 +21,17 @@ import {
   downloadFile,
   isFileNode,
   imageCDNState,
+  generateTypeName,
 } from "./normalize"
 
-const {
+import {
   handleReferences,
   handleWebhookUpdate,
   createNodeIfItDoesNotExist,
   handleDeletedNode,
   drupalCreateNodeManifest,
   getExtendedFileNodeData,
-} = require(`./utils`)
-
+} from "./utils"
 const imageCdnDocs = `https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-drupal#readme`
 
 const agent = {
@@ -176,6 +176,7 @@ exports.sourceNodes = async (
     fastBuilds = false,
     entityReferenceRevisions = [],
     languageConfig = {
+      filterByLanguages: false,
       defaultLanguage: `und`,
       enabledLanguages: [`und`],
       translatableEntities: [],
@@ -242,6 +243,7 @@ ${JSON.stringify(webhookBody, null, 4)}`
             createNodeId,
             createContentDigest,
             entityReferenceRevisions,
+            pluginOptions,
           })
           reporter.log(`Deleted node: ${deletedNode.id}`)
         }
@@ -263,6 +265,7 @@ ${JSON.stringify(webhookBody, null, 4)}`
           createContentDigest,
           getNode,
           reporter,
+          pluginOptions,
         })
       }
 
@@ -277,8 +280,6 @@ ${JSON.stringify(webhookBody, null, 4)}`
             getCache,
             getNode,
             reporter,
-            store,
-            languageConfig,
           },
           pluginOptions
         )
@@ -401,6 +402,7 @@ ${JSON.stringify(webhookBody, null, 4)}`
                 createContentDigest,
                 getNode,
                 reporter,
+                pluginOptions,
               })
             }
           }
@@ -415,6 +417,7 @@ ${JSON.stringify(webhookBody, null, 4)}`
                 createNodeId,
                 createContentDigest,
                 entityReferenceRevisions,
+                pluginOptions,
               })
             } else {
               // The data could be a single Drupal entity or an array of Drupal
@@ -435,8 +438,6 @@ ${JSON.stringify(webhookBody, null, 4)}`
                     getCache,
                     getNode,
                     reporter,
-                    store,
-                    languageConfig,
                   },
                   pluginOptions
                 )
@@ -512,7 +513,12 @@ ${JSON.stringify(webhookBody, null, 4)}`
           entityType => entityType === type
         )
 
-        const getNext = async (url, currentLanguage) => {
+        const getNext = async (
+          url,
+          currentLanguage,
+          filterByLanguages,
+          renamedEnabledLanguages
+        ) => {
           if (typeof url === `object`) {
             // url can be string or object containing href field
             url = url.href
@@ -570,6 +576,22 @@ ${JSON.stringify(webhookBody, null, 4)}`
             }
           }
 
+          if (d.body.data && currentLanguage && filterByLanguages) {
+            const languageCodeForFilter =
+              renamedEnabledLanguages &&
+              renamedEnabledLanguages.find(
+                language => language.as === currentLanguage
+              )
+                ? renamedEnabledLanguages.find(
+                    language => language.as === currentLanguage
+                  ).langCode
+                : currentLanguage
+
+            d.body.data = d.body.data.filter(
+              n => n.attributes.langcode === languageCodeForFilter
+            )
+          }
+
           if (d.body.data) {
             // @ts-ignore
             dataArray.push(...(d.body.data || []))
@@ -618,17 +640,27 @@ ${JSON.stringify(webhookBody, null, 4)}`
                     `page[offset]`,
                     String(pageOffset * pageSize)
                   )
-                  return getNext(newUrl.toString(), currentLanguage)
+                  return getNext(
+                    newUrl.toString(),
+                    currentLanguage,
+                    filterByLanguages,
+                    renamedEnabledLanguages
+                  )
                 })
               )
             }
           } else if (d.body.links?.next) {
-            await getNext(d.body.links.next, currentLanguage)
+            await getNext(
+              d.body.links.next,
+              currentLanguage,
+              filterByLanguages,
+              renamedEnabledLanguages
+            )
           }
         }
 
         if (isTranslatable === false) {
-          await getNext(url, ``)
+          await getNext(url, ``, false, ``)
         } else {
           for (let i = 0; i < languageConfig.enabledLanguages.length; i++) {
             let currentLanguage = languageConfig.enabledLanguages[i]
@@ -651,7 +683,16 @@ ${JSON.stringify(webhookBody, null, 4)}`
               urlPath
             )
 
-            await getNext(joinedUrl, currentLanguage)
+            const renamedEnabledLanguages =
+              getOptions().languageConfig.renamedEnabledLanguages
+            const filterByLanguages =
+              getOptions().languageConfig.filterByLanguages
+            await getNext(
+              joinedUrl,
+              currentLanguage,
+              filterByLanguages,
+              renamedEnabledLanguages
+            )
           }
         }
 
@@ -732,6 +773,7 @@ ${JSON.stringify(webhookBody, null, 4)}`
       createNodeId,
       cache,
       entityReferenceRevisions,
+      pluginOptions,
     })
   }
 
@@ -741,7 +783,9 @@ ${JSON.stringify(webhookBody, null, 4)}`
     reporter.info(`Downloading remote files from Drupal`)
 
     // Download all files (await for each pool to complete to fix concurrency issues)
-    const fileNodes = [...nodes.values()].filter(isFileNode)
+    const fileNodes = [...nodes.values()].filter(node =>
+      isFileNode(node, pluginOptions.typePrefix)
+    )
 
     if (fileNodes.length) {
       const downloadingFilesActivity = reporter.activityTimer(
@@ -754,12 +798,10 @@ ${JSON.stringify(webhookBody, null, 4)}`
           await downloadFile(
             {
               node,
-              store,
               cache,
               createNode,
               createNodeId,
               getCache,
-              reporter,
             },
             pluginOptions
           )
@@ -792,7 +834,6 @@ exports.onCreateDevServer = (
     createNodeId,
     getNode,
     actions,
-    store,
     cache,
     createContentDigest,
     getCache,
@@ -832,7 +873,6 @@ exports.onCreateDevServer = (
             getCache,
             getNode,
             reporter,
-            store,
           },
           pluginOptions
         )
@@ -872,6 +912,9 @@ exports.pluginOptionsSchema = ({ Joi }) =>
     disallowedLinkTypes: Joi.array().items(Joi.string()),
     skipFileDownloads: Joi.boolean(),
     imageCDN: Joi.boolean().default(true),
+    typePrefix: Joi.string()
+      .description(`Prefix for Drupal node types`)
+      .default(``),
     fastBuilds: Joi.boolean(),
     entityReferenceRevisions: Joi.array().items(Joi.string()),
     secret: Joi.string().description(
@@ -888,6 +931,7 @@ exports.pluginOptionsSchema = ({ Joi }) =>
           })
         )
         .required(),
+      filterByLanguages: Joi.boolean().default(false),
       translatableEntities: Joi.array().items(Joi.string()).required(),
       nonTranslatableEntities: Joi.array().items(Joi.string()).required(),
     }),
@@ -908,10 +952,22 @@ exports.createSchemaCustomization = (
   if (pluginOptions.skipFileDownloads && pluginOptions.imageCDN) {
     actions.createTypes([
       // polyfill so image CDN works on older versions of Gatsby
+      // this type is merged in with the inferred file__file and files types, adding Image CDN support via the gatsbyImage GraphQL field. The `RemoteFile` interface as well as the polyfill above are what add the gatsbyImage field.
       addRemoteFilePolyfillInterface(
-        // this type is merged in with the inferred file__file type, adding Image CDN support via the gatsbyImage GraphQL field. The `RemoteFile` interface as well as the polyfill above are what add the gatsbyImage field.
         schema.buildObjectType({
-          name: `file__file`,
+          name: generateTypeName(`file--file`, pluginOptions.typePrefix),
+          fields: {},
+          interfaces: [`Node`, `RemoteFile`],
+        }),
+        {
+          schema,
+          actions,
+          store,
+        }
+      ),
+      addRemoteFilePolyfillInterface(
+        schema.buildObjectType({
+          name: generateTypeName(`files`, pluginOptions.typePrefix),
           fields: {},
           interfaces: [`Node`, `RemoteFile`],
         }),

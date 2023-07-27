@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.11.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-plugin-styled-components@6.11.0/packages/gatsby-plugin-styled-components) (2023-06-15)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.11)
+
+**Note:** Version bump only for package gatsby-plugin-styled-components
+
+## [6.10.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-plugin-styled-components@6.10.0/packages/gatsby-plugin-styled-components) (2023-05-16)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.10)
+
+**Note:** Version bump only for package gatsby-plugin-styled-components
+
+## [6.9.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-plugin-styled-components@6.9.0/packages/gatsby-plugin-styled-components) (2023-04-18)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.9)
+
+**Note:** Version bump only for package gatsby-plugin-styled-components
+
+## [6.8.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-plugin-styled-components@6.8.0/packages/gatsby-plugin-styled-components) (2023-03-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.8)
+
+**Note:** Version bump only for package gatsby-plugin-styled-components
+
+## [6.7.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-plugin-styled-components@6.7.0/packages/gatsby-plugin-styled-components) (2023-02-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.7)
+
+**Note:** Version bump only for package gatsby-plugin-styled-components
+
 ## [6.6.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-plugin-styled-components@6.6.0/packages/gatsby-plugin-styled-components) (2023-02-07)
 
 [🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.6)

@@ -3,6 +3,67 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.11.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-cli@5.11.0/packages/gatsby-cli) (2023-06-15)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.11)
+
+#### Bug Fixes
+
+- update dependency node-fetch to ^2.6.11 for gatsby-cli [#38155](https://github.com/gatsbyjs/gatsby/issues/38155) ([6b8936a](https://github.com/gatsbyjs/gatsby/commit/6b8936aebe9e23a21eb8abee75cca3a7333b7d55))
+- update typescript [#38133](https://github.com/gatsbyjs/gatsby/issues/38133) ([aa7a078](https://github.com/gatsbyjs/gatsby/commit/aa7a078383ca5a549743be3269e9bde44655a185))
+
+#### Chores
+
+- Various `yarn bootstrap` fixes fixes [#38223](https://github.com/gatsbyjs/gatsby/issues/38223) ([df12265](https://github.com/gatsbyjs/gatsby/commit/df1226576b911be0f962c149c0bcbad279d9f806))
+- update semver [#38171](https://github.com/gatsbyjs/gatsby/issues/38171) ([208cdef](https://github.com/gatsbyjs/gatsby/commit/208cdef13f6488251ba1810a57a1e28c38635631))
+
+## [5.10.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-cli@5.10.0/packages/gatsby-cli) (2023-05-16)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.10)
+
+#### Bug Fixes
+
+- update minor and patch dependencies for gatsby-cli [#38006](https://github.com/gatsbyjs/gatsby/issues/38006) ([54f785c](https://github.com/gatsbyjs/gatsby/commit/54f785c29f58e7cf0fc508fad18c563e2f8f41fc))
+- update dependency semver to ^7.5.0 [#38023](https://github.com/gatsbyjs/gatsby/issues/38023) ([2564f6b](https://github.com/gatsbyjs/gatsby/commit/2564f6b247b622b51522ff1f91fe2a9ef34fa571))
+
+#### Chores
+
+- update gatsby monorepo [#38014](https://github.com/gatsbyjs/gatsby/issues/38014) ([ee0797c](https://github.com/gatsbyjs/gatsby/commit/ee0797cbfcaafd392f1e9c551c4f294b2d068e68))
+
+## [5.9.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-cli@5.9.0/packages/gatsby-cli) (2023-04-18)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.9)
+
+#### Bug Fixes
+
+- update minor and patch dependencies for gatsby-cli [#37873](https://github.com/gatsbyjs/gatsby/issues/37873) ([b9ffbb5](https://github.com/gatsbyjs/gatsby/commit/b9ffbb556244ba01b66c105d6916247bc3b855e4))
+- update dependency fs-extra to ^11.1.1 [#37827](https://github.com/gatsbyjs/gatsby/issues/37827) ([3e9a590](https://github.com/gatsbyjs/gatsby/commit/3e9a590fdc0b4cdbc763b6a6e3ca3e983ac8231a))
+- update typescript to v5 (major) [#37906](https://github.com/gatsbyjs/gatsby/issues/37906) ([3859ba6](https://github.com/gatsbyjs/gatsby/commit/3859ba6ce629e658525f858a8799b08c34c3eda5))
+
+#### Chores
+
+- update typescript [#37848](https://github.com/gatsbyjs/gatsby/issues/37848) ([9f92796](https://github.com/gatsbyjs/gatsby/commit/9f92796070b0e73fa92089af93de376c9be9021e))
+
+## [5.8.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-cli@5.8.0/packages/gatsby-cli) (2023-03-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.8)
+
+#### Bug Fixes
+
+- Pass `pluginName` to `reporter.activityTimer` & `reporter.createProgress` [#37710](https://github.com/gatsbyjs/gatsby/issues/37710) ([21e798b](https://github.com/gatsbyjs/gatsby/commit/21e798b198b334cef238c3c40da67b7657390f16))
+
+#### Other Changes
+
+- feat:(gatsby-cli) - support REACT_PROFILE env var value to set profile cli argument [#37754](https://github.com/gatsbyjs/gatsby/issues/37754) ([7bda38a](https://github.com/gatsbyjs/gatsby/commit/7bda38ac161fbd9521cb6f000675e07d810e634f))
+
+## [5.7.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-cli@5.7.0/packages/gatsby-cli) (2023-02-21)
+
+[🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.7)
+
+#### Chores
+
+- Fix typo in error message Fix [#37637](https://github.com/gatsbyjs/gatsby/issues/37637) ([7dfef03](https://github.com/gatsbyjs/gatsby/commit/7dfef0383c206142acf1a700306688615f66e3a7))
+
 ## [5.6.0](https://github.com/gatsbyjs/gatsby/commits/gatsby-cli@5.6.0/packages/gatsby-cli) (2023-02-07)
 
 [🧾 Release notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.6)
